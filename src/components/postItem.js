@@ -9,26 +9,14 @@ import {connect} from 'react-redux'
 
 class PostItem extends Component {
 
-
-  componentDidMount(){
-    this.setState({
-       ...this.props.posts.filter(post => String(post.id) === this.props.match.params.id)[0]
-
-
-  });
-
-  }
-    
-    
     render() {
         const {post} = this.props
         return (<div>
             <Card>
-        
         <CardBody>
           <CardTitle>{post.title}</CardTitle>
           <CardText>{post.body}</CardText>
-          <Link to={'/posts/${post.id}'} >
+          <Link to={`/posts/${post.id}`} >
           <Button><i class="fal fa-comment-exclamation"></i></Button>
           </Link>
         </CardBody>

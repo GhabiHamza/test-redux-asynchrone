@@ -1,4 +1,4 @@
-import {Get_Users,Get_Posts,Get_Comments, Get_User,} from './types'
+import {Get_Users,Get_Posts,Get_Comments} from './types'
 import axios from 'axios'
 
 

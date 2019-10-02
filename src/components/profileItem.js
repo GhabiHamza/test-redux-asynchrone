@@ -19,7 +19,7 @@ class ProfileItem extends Component {
           <CardTitle>{user.name}</CardTitle>
           <CardSubtitle>{user.username}</CardSubtitle>
           <CardText>{user.email}</CardText>
-          <Link to={'/users/${user.id}'} >
+          <Link to={`/users/${user.id}`} >
           <Button>See Posts</Button>
           </Link>
         </CardBody>

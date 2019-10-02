@@ -13,7 +13,7 @@ class CommentList extends React.Component{
         }
     render(){
     return ( <div>
-        {this.props.comments.map((comment)=><CommentItem comment={comment} key={comment.id}/>)}
+        {this.props.comments.filter(comment => String(comment.postId) === this.props.match.params.id).map((comment)=><CommentItem comment={comment} key={comment.id}/>)}
     </div> );
 }
 }

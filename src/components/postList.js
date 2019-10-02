@@ -14,7 +14,7 @@ class PostList extends Component {
        const {posts}=this.props
         return ( 
             <div>
-                {posts.map((post)=><PostItem post={post} key={post.id}/>)}
+                {posts.filter(post => String(post.userId) === this.props.match.params.id).map((post)=><PostItem post={post} key={post.id}/>)}
                 
             </div>
              );

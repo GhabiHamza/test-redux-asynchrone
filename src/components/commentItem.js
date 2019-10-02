@@ -3,14 +3,7 @@ import {connect} from 'react-redux'
 
 
 class CommentItem extends Component {
-    componentDidMount(){
-        this.setState({
-            ...this.props.comments.filter(comment => String(comment.id) === this.props.match.params.id)[0]
-
-
-        });
-        
-    }
+   
     
     render() { 
         const {comment}=this.props
